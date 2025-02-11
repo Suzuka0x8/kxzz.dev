@@ -1,4 +1,4 @@
-# Work in Progress
+# Some assets will eventually get changed
 
 <center align="center">
 
