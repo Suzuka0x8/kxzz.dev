@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="#2F3136" name="theme-color">
+    <meta content="@kxzz" property="og:title">
+    <meta property="og:description" content="kazz linktree" />
+	<meta property="og:image" content="assets/img/ari.jpg"/>
+    <title>@Kazz</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/users.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/img/icon.png" type="image/x-icon">
+
+    <style>
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 1s ease;
+        }
+
+        #overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #enterText {
+            font-size: 3em;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+        }
+
+        .container {
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .fade-in {
+            opacity: 1;
+        }
+
+        .profileLayout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .linkedAccounts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        }
+        
+        .linkedAccounts img {
+        margin-right: 20px;
+        transition: transform 0.3s ease;
+        width: 40px;
+        height: 40px;
+        }
+        
+        .linkedAccounts img:last-child {
+        margin-right: 0;
+        }
+        
+        .linkedAccounts img:hover {
+        transform: scale(1.1);
+        }
+
+        @keyframes bubble {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.2);
+                filter: brightness(1.2);
+            }
+        }
+
+        
+        body,
+        h1,
+        h3,
+        p {
+            user-select: none;
+            /* Prevent text selection */
+        }
+
+        
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @font-face {
+        font-family: 'Wolfenstein';
+        src: url('assets/font/wolfenstein.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Poppins', sans-serif; background-color: #222222;">
+    <video id="backgroundVideo" class="background" loop>
+	
+		<!-- https://files.catbox.moe/w773w9.mp4 
+			LINK TO VIDEO
+		-->
+        <source src="assets/vid/edit.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+    <div id="overlay">
+        <div id="enterText">Click to Enter</div>
+    </div>
+    <div class="container">
+        <img class="avatar" src="assets/img/logo1.jpg" draggable="false">
+        <div class="profileLayout">
+            <h1 class="profileUsername" style="color: #ffffff; text-shadow: 0 0 15px rgba(60, 60, 60);">Kazz</h1>
+            <h2 class="profilesymbole" style="color: #FF0000; text-shadow: 0 0 10px rgba(60, 60, 60); font-family: 'Wolfenstein';">%</h2>
+            <h3 id="typingText" style="color: #ffffff;" class="profileBio"></h3> <i>
+            <i>
+                <div id="typingTexts" style="display: none;">Alles für Deutschland</div>
+            </i>
+            <script src="assets/js/typing.js"></script>
+            <div class="linkedAccounts">
+                <a href="https://t.me/zxcsuzuka17" target="_blank">
+                    <img src="assets/tg/2111646.png" alt="Telegram Icon" draggable="false">
+                </a>
+
+                <a href="https://x.com/kxzzcod" target="_blank">
+                    <img src="assets/twt/image.png" width="40" height="40" alt="X Icon" draggable="false">
+                </a>
+
+                <a href="https://coindrop.to/kazz" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Square_Cash_app_logo.svg/800px-Square_Cash_app_logo.svg.png" width="40" height="40" alt="Support Icon" draggable="false">
+                </a>
+
+                <a href="mailto:suzuka.crmnl@proton.me" target="_blank">
+                    <img src="assets/img/email.png" width="40" height="40" alt="Email Icon" draggable="false">
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('enterText').addEventListener('click', function () {
+            document.getElementById('overlay').classList.add('hidden');
+            
+            var video = document.getElementById('backgroundVideo');
+            video.play();  
+            
+            
+            setTimeout(function () {
+                document.querySelector('.container').classList.add('fade-in');
+            }, 100);
+        });
+
+      
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+
+</html>
