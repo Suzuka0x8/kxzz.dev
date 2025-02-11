@@ -16,7 +16,7 @@ You can fork this repo to modify and make changes of your own. Please give me pr
 
 ## Built With
 
-My personal Linktree <a href="https://kxzz.dev" target="_blank">kxzz.dev</a> which features some of my social media links and a cool [video](https://files.catbox.moe/w773w9.mp4) in the back ;)<br/>
+My personal Linktree <a href="https://kxzz.dev" target="_blank">kxzz.dev</a> which features some of my social media links and a cool [video](https://www.youtube.com/watch?v=V6HhdD1YhaU) in the back ;)<br/>
 
 This project was built using these technologies.
 
